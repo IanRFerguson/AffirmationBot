@@ -25,7 +25,6 @@ api = tweepy.API(authSet, wait_on_rate_limit = True)
 # Check to confirm credentials
 try:
     api.verify_credentials()
-    print("\nConfirmed: Valid Credentials\n")
 
 except:
     print("\nWhoops! Invalid credentials\n")
@@ -39,7 +38,10 @@ def tweetGenerator():
 
     # Some random nice phrases to tag on to the tweet
     addOnPhrases = ['Make today count', 'Do something nice for yourself today', 'I believe in you',
-                   'You can do it!', 'Be great today', 'Make today great', 'You matter!', 'Take a breath']
+                   'You can do it!', 'Be great today', 'Make today great', 'You matter!', 'Take a breath',
+                   'You can accomplish anything you set your mind to!', 'Everyone needs a friend like you',
+                   'You are a light everywhere you go!', 'Thank you for being you!', 'You have a heart of gold',
+                   'You are absolute magic', 'Be gentle with yourself, you\'re doing the best you can!']
 
     random.shuffle(addOnPhrases)
     phrase = random.choice(addOnPhrases)
@@ -88,3 +90,6 @@ if today in followerDays:
 
 # We'll tweet everyday!
 spreadTheLove()
+
+print("\n *** TWEET SENT ***\n")
+print("Make it a great day!\n")
